@@ -35,6 +35,7 @@ jobs:
       
       - name: maven
         run: |
+          pwd
           mvn -B package --file pom.xml
           ls -a
       # Runs a set of commands using the runners shell
