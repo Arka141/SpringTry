@@ -45,3 +45,15 @@ jobs:
           ls -a
           echo Testing123
           echo test456
+  lint:
+  
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: Super-Linter
+      uses: github/super-linter@v3.15.5
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
